@@ -11,9 +11,30 @@
                       <a class="nav-link @yield('homeActive')" aria-current="page" href="/">Beranda</a>
                   </li>
 
-                  <li class="nav-item me-2">
-                      <a class="nav-link @yield('informationActive')"
-                          href="{{ route('home.information.index') }}">{{ __('Informasi') }}</a>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle @yield('informationActive')" href="#" id="navbarDropdownInformasi" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          {{ __('Informasi') }}
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownInformasi">
+                          <li>
+                              <a href="{{ route('home.information.index') }}" class="dropdown-item"><i
+                                      class="fa fa-list text-primary me-2"></i>List Informasi</a>
+                          </li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          @php
+                              $informationPages = \App\Models\Information::where('status', true)->limit(5)->get();
+                          @endphp
+                          @foreach ($informationPages as $page)
+                              <li>
+                                  <a class="dropdown-item" href="{{ route('home.information.show', $page->slug) }}">
+                                      <i class="fa fa-circle-chevron-right text-primary me-2"></i>
+                                      {{ $page->title }}</a>
+                              </li>
+                          @endforeach
+                      </ul>
                   </li>
 
                   <li class="nav-item me-2">
