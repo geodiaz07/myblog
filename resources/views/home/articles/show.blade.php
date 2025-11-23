@@ -22,7 +22,7 @@
                     @else
                         {{-- Jika gambar artikel null, tampilkan gambar dummy --}}
                         <div class="ratio ratio-21x9 rounded-top d-flex align-items-center"
-                            style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('https://wallpapercave.com/wp/wp10992174.png'); background-size: cover; background-position: center;">
+                            style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
                             <h1 class="text-white ms-lg-5 ms-3" style="margin-top: 18%"><b>MyBlog </b> <br> <small>Aplikasi
                                     CMS Terbaik</small></h1>
                         </div>

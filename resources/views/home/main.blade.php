@@ -12,17 +12,16 @@
         <header class="featured-article-hero"
             @if ($featuredArticle->image) style="background-image: url('{{ asset('storage/' . $featuredArticle->image) }}');"
             @else
-                style="background-image: url('https://wallpapercave.com/wp/wp10992174.png');" @endif>
+                style="background-image: url('{{ config('app.theme') }}');" @endif>
             <div class="container">
                 <span class="badge bg-danger mb-3 fw-bold">FEATURED ARTICLE</span>
                 <h1 class="display-4 mb-3">{{ $featuredArticle->title }}</h1>
                 <p class="lead mb-4">{{ Str::limit(strip_tags($featuredArticle->meta_desc), 250) }}</p>
-                <a href="{{-- route('home.articles.show', $featuredArticle->slug) --}}"
-                    class="btn btn-warning rounded-pill shadow">Baca Selengkapnya</a>
+                <a href="{{-- route('home.articles.show', $featuredArticle->slug) --}}" class="btn btn-warning rounded-pill shadow">Baca Selengkapnya</a>
             </div>
         </header>
     @else
-        <header class="featured-article-hero" style="background-image: url('https://wallpapercave.com/wp/wp10992174.png');">
+        <header class="featured-article-hero" style="background-image: url('{{ config('app.theme') }}');">
             <div class="container">
                 <span class="badge bg-danger mb-3 fw-bold">INFO</span>
                 <h1 class="display-4 mb-3">Selamat Datang di Portal Berita Kami</h1>
@@ -34,12 +33,11 @@
 
     <section class="container-xl my-5">
         <div class="row my-3">
-            <q class="text-center">Selamat datang di <b class="text-primary">{{ config('app.name', 'Laravel') }}</b>,
-                portal berita terdepan yang
-                menyajikan informasi terkini dan terverifikasi langsung ke hadapan Anda. Kami berkomitmen untuk
-                memberikan liputan mendalam dari berbagai kategori. Dengan antarmuka yang intuitif dan mudah
-                diakses, Anda tidak akan pernah ketinggalan perkembangan terbaru. Jelajahi artikel pilihan kami, ikuti
-                kategori favorit Anda, dan dapatkan wawasan yang akurat, cepat, dan komprehensif setiap hari.
+            <q class="text-center">
+                Selamat datang di <b class="text-primary">{{ config('app.name', 'Laravel') }}</b>, sumber informasi kesehatan terpercaya yang menyajikan artikel medis
+                terkini dan terverifikasi oleh ahli. Kami berkomitmen untuk memberikan edukasi kesehatan mendalam seputar
+                gaya hidup, pencegahan penyakit, dan tips medis. Dengan antarmuka yang intuitif, temukan wawasan kesehatan
+                yang akurat dan relevan untuk menjaga kualitas hidup Anda dan keluarga setiap hari.
             </q>
         </div>
         <hr class="my-5">
@@ -61,7 +59,7 @@
                                     </div>
                                 @else
                                     <div class="card-img-top d-flex align-items-center justify-content-center text-white-50 ratio ratio-16x9"
-                                        style=" background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('https://wallpapercave.com/wp/wp10992174.png'); background-size: cover; background-position: center;">
+                                        style=" background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
                                         MyBlog Image
                                     </div>
                                 @endif
@@ -70,8 +68,7 @@
                                     <p class="card-text flex-grow-1">
                                         <small>{{ Str::limit(strip_tags($val->meta_desc), 120) }}</small>
                                     </p>
-                                    <a href="{{-- route('home.articles.show', $val->slug) --}}"
-                                        class="btn btn-sm btn-primary mt-1 rounded-pill">Baca
+                                    <a href="{{-- route('home.articles.show', $val->slug) --}}" class="btn btn-sm btn-primary mt-1 rounded-pill">Baca
                                         Artikel</a>
                                 </div>
                                 <div class="card-footer text-center">

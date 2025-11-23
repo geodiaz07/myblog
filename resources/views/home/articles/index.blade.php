@@ -7,7 +7,7 @@
 @section('content')
     <!-- Header Section -->
     <header class="text-white text-center py-5"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('https://wallpapercave.com/wp/wp10992174.png'); background-size: cover; background-position: center;">
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
         <div class="container">
             <h2 class="fw-bold mt-2">Daftar Artikel</h2>
             <p>Selami dunia pengetahuan melalui artikel-artikel mendalam kami</p>
@@ -30,7 +30,7 @@
                                                 alt="Gambar Artikel: {{ $val->title }}">
                                         @else
                                             <div class="img-fluid d-flex align-items-center justify-content-center text-white-50"
-                                                style=" height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('https://wallpapercave.com/wp/wp10992174.png'); background-size: cover; background-position: center;">
+                                                style=" height: 100%; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
                                                 MyBlog Image
                                             </div>
                                         @endif

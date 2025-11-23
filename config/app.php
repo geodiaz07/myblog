@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'theme' => env('APP_THEME', 'https://wallpapers.com/images/hd/doctor-with-purple-stethoscope-hd-medical-i8eodw1rhfq6r353.jpg'),
+
 ];
