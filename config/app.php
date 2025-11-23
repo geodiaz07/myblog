@@ -124,5 +124,6 @@ return [
     ],
 
     'theme' => env('APP_THEME', 'https://wallpapers.com/images/hd/doctor-with-purple-stethoscope-hd-medical-i8eodw1rhfq6r353.jpg'),
+    'theme_color' => env('APP_THEME_COLOR', '(13, 110, 253, 0.7)'), // Default warna biru transparan
 
 ];

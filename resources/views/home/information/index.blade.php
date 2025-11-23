@@ -7,7 +7,7 @@
 @section('content')
     <!-- Header Section -->
     <header class="text-white text-center py-5"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url({{ config('app.theme') }}'); background-size: cover; background-position: center;">
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba{{ config('app.theme_color') }}), url({{ config('app.theme') }}'); background-size: cover; background-position: center;">
         <div class="container">
             <h2 class="fw-bold mt-2">Daftar Informasi</h2>
             <p>Berbagai informasi menarik yang layak Anda baca</p>

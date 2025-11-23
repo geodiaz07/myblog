@@ -59,7 +59,7 @@
                                     </div>
                                 @else
                                     <div class="card-img-top d-flex align-items-center justify-content-center text-white-50 ratio ratio-16x9"
-                                        style=" background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(13, 110, 253, 0.7)), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
+                                        style=" background: linear-gradient(rgba(0, 0, 0, 0.7), rgba{{ config('app.theme_color') }}), url('{{ config('app.theme') }}'); background-size: cover; background-position: center;">
                                         MyBlog Image
                                     </div>
                                 @endif
